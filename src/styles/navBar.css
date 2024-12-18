@@ -58,8 +58,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     position: relative;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         background-color: var(--clr-bg-6);
@@ -84,7 +84,7 @@
     font-weight: 400;
     font-size: 0.8rem;
     visibility: hidden;
-
+    transition: all 0.3s step-end;
 }
 
 .home:hover::after,
@@ -123,7 +123,7 @@
     background-color: var(--clr-bg-2);
     width: 20rem;
     padding: 10px 1.8rem;
-    border: solid 1px rgb(60, 59, 59);
+    border: solid 1px var(--clr-bdr-2);
     border-radius: 5px;
 }
 
@@ -166,7 +166,7 @@
     width: 6.5rem;
     padding: 4px 10px;
     border-radius: 15px;
-    border: solid 1px rgb(109, 106, 106);
+    border: solid 1px var(--clr-bdr-3);
     display: flex;
     justify-content: center;
     align-items: center;

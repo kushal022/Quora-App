@@ -5,10 +5,10 @@
 }
 
 :root {
-    /* boorders */
-    --bdr-1: solid 2px transparent;
-    /* shodows */
-    --box-shado-1: inset 0 0 10px 10px transparent;
+
+    /* shadows */
+    --box-shadow-1: inset 0 0 10px 10px transparent;
+    --box-shadow-2: inset 0 0 10px 1px rgba(24, 23, 23, 0.485);
     /* font family */
     --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     /* Colors */
@@ -77,7 +77,13 @@
     --clr-text-7: #6e6f71;
     /*--------------  border clr ----------- */
     --clr-bdr-1: #2e69ff;
+    --clr-bdr-2: rgb(60, 59, 59);
+    --clr-bdr-3: rgb(109, 106, 106);
+    --clr-bdr-4: rgba(109, 106, 106, 0.262);
+    --clr-bdr-5: rgba(109, 106, 106, 0.625);
 
+    /* borders */
+    --bdr-1: solid 2px transparent;
 }
 
 
