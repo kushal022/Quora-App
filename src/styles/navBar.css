@@ -12,7 +12,9 @@
     width: 100%;
     height: var(--navBarHeight);
     gap: 1.6rem;
-
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
 }
 
@@ -232,3 +234,9 @@
         background-color: var(--clr-bg-12);
     }
 }
+
+/* ================================================== */
+
+/* .active {
+    color: red;
+} */

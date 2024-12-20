@@ -4,6 +4,8 @@
 
 .left-compo-spaces {
     width: 100%;
+    position: sticky;
+    top: 4.2rem;
 }
 
 /* -------------- Spaces-container------------ */

@@ -22,11 +22,11 @@ function NavBar() {
                 <img className='q-logo' src={QuoraLogo} alt="quora-logo" />
             </div>
             <ul className='nav-list-left'>
-                <li className='home'><NavLink to="/home" className='nav-icon'><MdHome /></NavLink></li>
+                <li className='home'><NavLink to="home" className='nav-icon'><MdHome /></NavLink></li>
                 <li className='following'><NavLink to="following" className='nav-icon'><RiListView /></NavLink></li>
                 <li className='answer'><NavLink className='nav-icon'><FaRegEdit /></NavLink></li>
                 <li className='spaces'><NavLink className='nav-icon'><FaPeopleGroup /></NavLink></li>
-                <li className='notifications'><NavLink className='nav-icon'><IoNotifications /></NavLink></li>
+                <li className='notifications'><NavLink to="notification" className='nav-icon'><IoNotifications /></NavLink></li>
             </ul>
             <div className='search-box nav-icon'>
                 <IoIosSearch className='search-icon' />

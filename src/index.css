@@ -14,37 +14,16 @@
     --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     /* Colors */
     --q-colors-text-green: #328f5a;
-    --q-colors-text-red: #f52936;
-    --q-colors-text-red_error: #e95111;
-    --q-colors-text-tribe_theme_pink: #d17078;
-    --q-colors-text-tribe_theme_yellow: #f6be08;
-    --q-colors-text-tribe_theme_purple: #b1599e;
     --q-colors-text-tribe_theme_green: #06961c;
-    --q-colors-bg-white_transparent: rgba(24, 24, 24, 0.6);
-    --q-colors-bg-white_transparent_light: rgba(24, 24, 24, 0.95);
-    --q-colors-bg-blue_light: #282d41;
-    --q-colors-bg-blue_ultralight: #1a2035;
-    --q-colors-bg-green: #328f5a;
+
     --q-colors-bg-green_light: #0c2417;
-    --q-colors-bg-red_error: #e95111;
     --q-colors-bg-red_error_light: #2f130a;
-    --q-colors-bg-red: #f52936;
     --q-colors-bg-tribe_theme_pink: #d17078;
     --q-colors-bg-tribe_theme_yellow: #f6be08;
     --q-colors-bg-tribe_theme_purple: #b1599e;
-    --q-colors-bg-tribe_theme_green: #06961c;
     --q-colors-bg-poe_primary_purple_light: #131249;
     --q-colors-bg-poe_primary_purple_dark: #470089;
-    --q-colors-border-green: #328f5a;
-    --q-colors-border-red: #f52936;
     --q-colors-border-red_error: #e95111;
-    --q-colors-border-darken: rgba(255, 255, 255, 0.06);
-    --q-colors-focusOutline-default: rgba(72, 148, 253, 0.35);
-    --q-colors-tapHighlightBg-gray: rgba(32, 32, 32, 0.5);
-    --q-colors-tapHighlightBg-gray_ultralight: rgba(20, 30, 43, 0.5);
-    --q-colors-tapHighlightBg-white: rgba(24, 24, 24, 0.6);
-    --q-colors-tapHighlightBg-blue_light: #0c264c;
-    --q-colors-tapHighlightBg-raised: rgba(38, 38, 38, 0.6);
     /* -------------  bg clr  --------------- */
     --clr-bg-1: #181818;
     --clr-bg-2: #202020;
@@ -59,6 +38,18 @@
     --clr-bg-10: rgba(255, 255, 255, 0.04);
     --clr-bg-11: #f52936;
     --clr-bg-12: #eb1111de;
+    --clr-bg-12-1: #f5293727;
+    --clr-bg-13: #0c264c;
+    --clr-bg-14: #282d41;
+    --clr-bg-15: #1a2035;
+    --clr-bg-16: rgba(72, 148, 253, 0.35);
+    --clr-bg-17: rgba(255, 255, 255, 0.06);
+    --clr-bg-18: rgba(32, 32, 32, 0.5);
+    --clr-bg-19: rgba(20, 30, 43, 0.5);
+    --clr-bg-20: rgba(24, 24, 24, 0.6);
+    --clr-bg-21: rgba(38, 38, 38, 0.6);
+    --clr-bg-22: rgba(24, 24, 24, 0.6);
+    --clr-bg-23: rgba(24, 24, 24, 0.95);
     /*--------------  text clr ---------------- */
     --clr-text-1: #e6e7e8;
     --clr-text-2: #fff;

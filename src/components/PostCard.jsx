@@ -23,7 +23,7 @@ function PostCard() {
             <div className="post-content-post-card">
                 <h2>Post Title</h2>
                 <p>This is the content of the post. content of the post.content of the post.content of the post. content of the post. content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussioncontent of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussion.</p>
-                <button className='extend-para'><span>... </span>(more)</button>
+                <button className='extend-para'>(more)</button>
             </div>
             <div className="post-card-img-box">
                 <img src="../../public/spaces-img/spaceimg2.jpg" alt="Post Card Image" />

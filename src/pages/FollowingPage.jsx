@@ -21,7 +21,6 @@ function FollowingPage() {
                 <PostCard />
             </div>
             <div className='right-section'>
-                <Advertisement />
 
             </div>
         </main>
