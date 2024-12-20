@@ -1,13 +1,16 @@
 import React from 'react'
-import '../styles/homePage.css'
+import '../styles/followingPage.css'
 import QuestionBox from '../components/QuestionBox'
 import Space from '../components/Space'
-import Advertisement from '../components/Advertisement'
 import PostCard from '../components/PostCard'
+import Advertisement from '../components/Advertisement'
 
-function HomePage() {
+
+
+
+function FollowingPage() {
     return (
-        <main className='main-homePage'>
+        <main className='main-following-page'>
             <div className="left-section">
                 <Space />
             </div>
@@ -19,9 +22,10 @@ function HomePage() {
             </div>
             <div className='right-section'>
                 <Advertisement />
+
             </div>
         </main>
     )
 }
 
-export default HomePage
+export default FollowingPage
