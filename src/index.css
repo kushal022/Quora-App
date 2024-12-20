@@ -9,22 +9,19 @@
     /* shadows */
     --box-shadow-1: inset 0 0 10px 10px transparent;
     --box-shadow-2: inset 0 0 10px 1px rgba(24, 23, 23, 0.485);
+    --box-shadow-3: 0 0 10px 1px rgba(24, 23, 23, 0.485);
     /* font family */
     --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     /* Colors */
-    --q-colors-text-blue: #4894fd;
     --q-colors-text-green: #328f5a;
     --q-colors-text-red: #f52936;
     --q-colors-text-red_error: #e95111;
     --q-colors-text-tribe_theme_pink: #d17078;
     --q-colors-text-tribe_theme_yellow: #f6be08;
-    --q-colors-text-tribe_theme_blue: #2479d6;
     --q-colors-text-tribe_theme_purple: #b1599e;
     --q-colors-text-tribe_theme_green: #06961c;
-    --q-colors-text-poe_primary_purple: #7674f9;
     --q-colors-bg-white_transparent: rgba(24, 24, 24, 0.6);
     --q-colors-bg-white_transparent_light: rgba(24, 24, 24, 0.95);
-    --q-colors-bg-blue: #287dff;
     --q-colors-bg-blue_light: #282d41;
     --q-colors-bg-blue_ultralight: #1a2035;
     --q-colors-bg-green: #328f5a;
@@ -34,15 +31,10 @@
     --q-colors-bg-red: #f52936;
     --q-colors-bg-tribe_theme_pink: #d17078;
     --q-colors-bg-tribe_theme_yellow: #f6be08;
-    --q-colors-bg-tribe_theme_blue: #2479d6;
     --q-colors-bg-tribe_theme_purple: #b1599e;
     --q-colors-bg-tribe_theme_green: #06961c;
-    --q-colors-bg-poe_primary_purple: #7674f9;
-    --q-colors-bg-poe_purple_bubble: #3b3abe;
     --q-colors-bg-poe_primary_purple_light: #131249;
     --q-colors-bg-poe_primary_purple_dark: #470089;
-    --q-colors-bg-poe_primary_purple_disabled: #7674f9;
-    --q-colors-border-blue: #2e69ff;
     --q-colors-border-green: #328f5a;
     --q-colors-border-red: #f52936;
     --q-colors-border-red_error: #e95111;
@@ -75,6 +67,13 @@
     --clr-text-5: #d5d6d6;
     --clr-text-6: #b1b3b6;
     --clr-text-7: #6e6f71;
+    --clr-text-8: #2e69ff;
+    --clr-text-9: #4894fd;
+    --clr-text-10: #287dff;
+    --clr-text-11: #2479d6;
+    --clr-text-11: #3b3abe;
+    --clr-text-11: #7674f9;
+
     /*--------------  border clr ----------- */
     --clr-bdr-1: #2e69ff;
     --clr-bdr-2: rgb(60, 59, 59);

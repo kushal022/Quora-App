@@ -1,8 +1,12 @@
 @import url('../index.css');
 
 .main-homePage {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
     gap: 1rem;
+}
+
+.middle-section {
+    width: 40%;
 }
