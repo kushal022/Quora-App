@@ -50,6 +50,7 @@
     --clr-bg-21: rgba(38, 38, 38, 0.6);
     --clr-bg-22: rgba(24, 24, 24, 0.6);
     --clr-bg-23: rgba(24, 24, 24, 0.95);
+    --clr-bg-24: rgba(24, 24, 24, 0.95);
     /*--------------  text clr ---------------- */
     --clr-text-1: #e6e7e8;
     --clr-text-2: #fff;
@@ -62,8 +63,8 @@
     --clr-text-9: #4894fd;
     --clr-text-10: #287dff;
     --clr-text-11: #2479d6;
-    --clr-text-11: #3b3abe;
-    --clr-text-11: #7674f9;
+    --clr-text-12: #3b3abe;
+    --clr-text-13: #7674f9;
 
     /*--------------  border clr ----------- */
     --clr-bdr-1: #2e69ff;

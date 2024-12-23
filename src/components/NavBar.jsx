@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/navBar.css'
 import QuoraLogo from '../../public/quoraLogo2.png'
 import { NavLink, Link } from 'react-router-dom'
@@ -12,10 +12,21 @@ import { FcButtingIn } from "react-icons/fc";
 import { IoGlobeOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa";
+import AddQuestion from './AddQuestion';
 
 
 function NavBar() {
-    // console.log(FaSearch)
+    const [isOpenAddQusCard, setIsOpenAddQusCard] = useState(false);
+    const [initialCard, setInitialCard] = useState('addQusCard')
+    const [disableChild, setDisableChild] = useState(false);
+
+
+    // Handle Add Qus:
+    const handleAddQus = (e) => {
+        e.preventDefault();
+        setIsOpenAddQusCard(!isOpenAddQusCard);
+    }
+
     return (
         <nav className='nav-container'>
             <div className='q-logo-container'>
@@ -42,11 +53,32 @@ function NavBar() {
                 <li className='profile-icon'><NavLink className='nav-icon'><FcButtingIn /></NavLink></li>
                 <li className='lang-icon'><NavLink className='nav-icon'><IoGlobeOutline /></NavLink></li>
                 <li className='add-arrow-btn-box'>
-                    <button className='add-qus-btn'>Add question </button>
+                    <button onClick={handleAddQus} className='add-qus-btn'>Add question </button>
                     <button className='create-post-btn'><FaChevronDown /></button>
                 </li>
             </ul>
-        </nav>
+            <div className="add-qus-card"
+                // onClick={(e) => {
+                //     !disableChild ? setIsOpenAddQusCard(!isOpenAddQusCard) : null;
+                //     // setDisableChild(false);
+                // }}
+                style={{ display: isOpenAddQusCard ? "flex" : "none" }}>
+
+                <AddQuestion
+                    // closePage={(e) => {
+                    //     // e.stopPropagation(); 
+                    //     // setDisableChild(!disableChild);
+                    //     console.log("helo");
+                    //     setIsOpenAddQusCard(!isOpenAddQusCard);
+
+                    // }}
+                    isOpenAddQusCard={isOpenAddQusCard}
+                    setIsOpenAddQusCard={setIsOpenAddQusCard}
+                    initialCard={initialCard}
+                    setInitialCard={setInitialCard}
+                />
+            </div>
+        </nav >
     )
 }
 

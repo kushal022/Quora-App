@@ -18,6 +18,30 @@
 
 }
 
+/* ----------- Add Qus Card for Add qus btn ---------------------- */
+
+.hidden-qus-card {
+    display: none;
+}
+
+.visible-qus-card {
+    display: flex;
+}
+
+.add-qus-card {
+    background-color: var(--clr-bg-23);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+
+
 /* ----------- Logo ---------------------- */
 .q-logo-container {
     width: 8rem;
