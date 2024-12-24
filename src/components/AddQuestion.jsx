@@ -7,29 +7,19 @@ import { GoPeople } from "react-icons/go";
 import { CiImageOn } from "react-icons/ci";
 
 function AddQuestion(props) {
-    const [clickedAdd, setClickedAdd] = useState(true);
-    const [clickedCreate, setClickedCreate] = useState(false);
-
-
+    //--------------- Add btn handler-------------
     const handlerAddQuestion = () => {
         props.setInitialCard('addQusCard');
-        setClickedAdd(true);
-        setClickedCreate(!clickedCreate);
-
     }
+    //--------------- Create post btn handler-------------
     const handlerCreatePost = () => {
         props.setInitialCard('createPost');
-        setClickedCreate(true);
-        setClickedAdd(!clickedAdd);
-
     }
     //-------- Close Card handler------------
     const handlerCloseCard = (e) => {
         e.preventDefault();
         props.setIsOpenAddQusCard(!props.isOpenAddQusCard);
         props.setInitialCard('addQusCard')
-        setClickedAdd(true);
-        setClickedCreate(false);
     }
 
     //-------- Submit handler------------
@@ -46,19 +36,16 @@ function AddQuestion(props) {
                 <button
                     className='add-Qus-btn'
                     onClick={handlerAddQuestion}
-                    style={clickedAdd ? {
+                    style={props.initialCard === 'addQusCard' ? {
                         borderBottomColor: 'var(--clr-bdr-1)', backgroundColor: 'transparent'
                     } : null}
-                    disabled={clickedAdd ? true : false}
                 >Add Question</button>
                 <button
                     className='create-btn'
                     onClick={handlerCreatePost}
-                    style={clickedCreate ? {
+                    style={props.initialCard === 'createPost' ? {
                         borderBottomColor: 'var(--clr-bdr-1)', backgroundColor: 'transparent'
                     } : null}
-                    disabled={clickedCreate ? true : false}
-
                 >Create Post</button>
             </div>
 
@@ -86,7 +73,7 @@ function AddQuestion(props) {
                         </textarea>
                         <div className="suggestion-box"></div>
                         <div className="cancel-add-btn-box">
-                            <button>Cancel</button>
+                            <button onClick={handlerCloseCard} >Cancel</button>
                             <button>Add question</button>
                         </div>
                     </div>
@@ -111,7 +98,7 @@ function AddQuestion(props) {
                         <div className="letter-img-post-box">
                             <button className='letter-btn'>Aa</button>
                             <button className='img-btn'><CiImageOn /></button>
-                            <button className='post-btn'>Post</button>
+                            <button className='post-btn' disabled={true} >Post</button>
                         </div>
                     </div>
                 </form>}

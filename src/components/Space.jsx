@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/spaces.css'
 import { Link } from 'react-router-dom';
-import spaceData from '../api/spaceData.json'
+
+import spaceData from '../api/spaceData.json'  // Space data import
 
 function Space() {
     const [query, setQuery] = useState([
