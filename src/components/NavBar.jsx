@@ -27,6 +27,7 @@ function NavBar() {
     const [isOpenPremiumCard, setIsOpenPremiumCard] = useState(false);
     const [initialCard, setInitialCard] = useState('addQusCard');
     const [disableChild, setDisableChild] = useState(false);
+    // Drop Down Toggles states:
     const [toggleDownarrow, setToggleDownarrow] = useState(false);
     const [toggleDropDownSpace, setToggleDropDownSpace] = useState(false);
     const [toggleDropDownProfile, setToggleDropDownProfile] = useState(false);
@@ -55,40 +56,35 @@ function NavBar() {
     const handlerDownarrow = (e) => {
         e.preventDefault();
         setToggleDownarrow(!toggleDownarrow);
-        toggleDropDownSpace ? setToggleDropDownSpace(!toggleDropDownSpace) : null;
-        toggleDropDownProfile ? setToggleDropDownProfile(!toggleDropDownProfile) : null;
-        toggleDropDownLanguage ? setToggleDropDownLanguage(!toggleDropDownLanguage) : null;
     }
     //------------- Space DropDown Toggle handler ---------
     const handlerDropdownSpace = (e) => {
         e.preventDefault();
         setToggleDropDownSpace(!toggleDropDownSpace);
-        toggleDownarrow ? setToggleDownarrow(!toggleDownarrow) : null;
-        toggleDropDownProfile ? setToggleDropDownProfile(!toggleDropDownProfile) : null;
-        toggleDropDownLanguage ? setToggleDropDownLanguage(!toggleDropDownLanguage) : null;
     }
 
     //------------- Profile DropDown Toggle handler ---------
     const handlerDropdownProfile = (e) => {
         e.preventDefault();
         setToggleDropDownProfile(!toggleDropDownProfile);
-        toggleDownarrow ? setToggleDownarrow(!toggleDownarrow) : null;
-        toggleDropDownSpace ? setToggleDropDownSpace(!toggleDropDownSpace) : null;
-        toggleDropDownLanguage ? setToggleDropDownLanguage(!toggleDropDownLanguage) : null;
     }
 
     //------------- Language DropDown Toggle handler ---------
     const handlerDropdownLanguage = (e) => {
         e.preventDefault();
         setToggleDropDownLanguage(!toggleDropDownLanguage);
-        toggleDownarrow ? setToggleDownarrow(!toggleDownarrow) : null;
-        toggleDropDownProfile ? setToggleDropDownProfile(!toggleDropDownProfile) : null;
-        toggleDropDownSpace ? setToggleDropDownSpace(!toggleDropDownSpace) : null;
     }
 
+    //------------- Close Dropdowns on click outside ----------
+    const handlerCloseDropDown = () => {
+        if (toggleDropDownProfile) setToggleDropDownProfile(false);
+        if (toggleDropDownLanguage) setToggleDropDownLanguage(false);
+        if (toggleDropDownSpace) setToggleDropDownSpace(false);
+        if (toggleDownarrow) setToggleDownarrow(false);
+    }
 
     return (
-        <nav className='nav-container'>
+        <nav className='nav-container' onClick={handlerCloseDropDown}>
             <div className='q-logo-container'>
                 <img className='q-logo' src={QuoraLogo} alt="quora-logo" />
             </div>
@@ -96,9 +92,9 @@ function NavBar() {
                 <li className='home'><NavLink to="/" className='nav-icon'><MdHome /></NavLink></li>
                 <li className='following'><NavLink to="following" className='nav-icon'><RiListView /></NavLink></li>
                 <li className='answer'><NavLink to="answer" className='nav-icon'><FaRegEdit /></NavLink></li>
-                <li className='spaces'
-                    onClick={handlerDropdownSpace}
-                ><span className='nav-icon'><FaPeopleGroup /></span>
+                <li className='spaces' onClick={handlerDropdownSpace}>
+                    <span className='nav-icon'><FaPeopleGroup /></span>
+                    {/* ---------- Drop down box for spaces----------- */}
                     <div className="space-dropdown-box"
                         style={{ display: toggleDropDownSpace ? "block" : "none" }}
                     >
@@ -117,35 +113,35 @@ function NavBar() {
                 </li>
                 <li className='notifications'><NavLink to="notification" className='nav-icon'><IoNotifications /></NavLink></li>
             </ul>
+            {/* ------------- Search box -------------------- */}
             <div className='search-box nav-icon'>
                 <IoIosSearch className='search-icon' />
                 <input className='search-input-box'
                     type="text"
-                    placeholder='Search Quora'
-                />
+                    placeholder='Search Quora'>
+                </input>
             </div>
+            {/* ------------------- Right nav List icons ---------------- */}
             <ul className='nav-list-right'>
                 <li className='try-quora-box'>
                     <button
                         onClick={handleOpenPremiumCard}
-                        className='try-quora-link'>Try Quora+</button>
-
-
+                        className='try-quora-link'
+                    >Try Quora+
+                    </button>
                 </li>
                 <li className='profile-icon'>
                     <button className='nav-icon' onClick={handlerDropdownProfile}><FcButtingIn /></button>
-                    <div
-                        className='profile-dropdown-box'
-                        style={{ display: !toggleDropDownProfile ? "none" : "block" }}
-                    >
+                    <div className='profile-dropdown-box'
+                        style={{ display: !toggleDropDownProfile ? "none" : "block" }}>
                         <Profile />
                     </div>
                 </li>
                 <li className='lang-icon'>
                     <button onClick={handlerDropdownLanguage} className='nav-icon'><IoGlobeOutline /></button>
                     <div className='lang-dropdown-box'
-                        style={{ display: toggleDropDownLanguage ? "block" : "none" }}
-                    >
+                        style={{ display: toggleDropDownLanguage ? "block" : "none" }}>
+                        {/* -------- drop down box for Lang list ----------- */}
                         <ul>
                             <li>Languages</li>
                             <li>
@@ -161,6 +157,7 @@ function NavBar() {
                 <li className='add-arrow-btn-box'>
                     <button onClick={handleAddQus} className='add-qus-btn'>Add question </button>
                     <button className='create-post-btn' onClick={handlerDownarrow}><FaChevronDown /></button>
+                    {/* ---------- Drop down box for create post ----------- */}
                     <div className="dropdown-btn-box"
                         style={{ display: !toggleDownarrow ? "none" : "block" }}
                     >
@@ -168,20 +165,19 @@ function NavBar() {
                     </div>
                 </li>
             </ul>
+            {/* ----------- Add Question Card for add question button ---------------- */}
             <div className="add-qus-card"
                 // onClick={(e) => {
                 //     !disableChild ? setIsOpenAddQusCard(!isOpenAddQusCard) : null;
                 //     // setDisableChild(false);
                 // }}
                 style={{ display: isOpenAddQusCard ? "flex" : "none" }}>
-
                 <AddQuestion
                     // closePage={(e) => {
                     //     // e.stopPropagation(); 
                     //     // setDisableChild(!disableChild);
                     //     console.log("helo");
                     //     setIsOpenAddQusCard(!isOpenAddQusCard);
-
                     // }}
                     isOpenAddQusCard={isOpenAddQusCard}
                     setIsOpenAddQusCard={setIsOpenAddQusCard}
@@ -189,13 +185,12 @@ function NavBar() {
                     setInitialCard={setInitialCard}
                 />
             </div>
+            {/* ----------- Premium Card for premium button ---------------- */}
             <div className="premium-card"
                 style={{ display: isOpenPremiumCard ? "flex" : "none" }}
-                onClick={(e) => setIsOpenPremiumCard(!isOpenPremiumCard)}
-            >
+                onClick={(e) => setIsOpenPremiumCard(!isOpenPremiumCard)}>
                 <h1>This is premium card</h1>
             </div>
-
         </nav >
     )
 }

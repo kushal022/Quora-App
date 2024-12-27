@@ -214,12 +214,6 @@
 
 }
 
-
-
-
-
-
-
 /* -------------------- Search box ----------------------- */
 .search-box {
     position: relative;
@@ -434,4 +428,15 @@
 
 .active {
     color: red;
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
 }
