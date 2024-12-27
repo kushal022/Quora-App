@@ -1,0 +1,350 @@
+/* --------- Section Styles ---------- */
+.main-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.left-sec {
+    width: 10%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+
+.middle-sec {
+    width: 40%;
+    height: fit-content;
+    border-radius: 10px;
+
+}
+
+.right-sec {
+    width: 20%;
+    height: fit-content;
+    border-radius: 10px;
+
+}
+
+
+/* --------------- Left section------- */
+.left-sec>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.left-sec>div>p {
+    padding: 0.5rem 1rem;
+    color: var(--clr-text-2);
+    font-weight: 500;
+    border-bottom: solid 1px var(--clr-bdr-5);
+}
+
+.left-sec>div>ul>li {
+    list-style-type: none;
+    width: 100%;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: var(--clr-bg-4-1);
+    }
+}
+
+.left-sec>div>ul>li>button {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-text-2);
+    cursor: pointer;
+}
+
+
+/* --------------- Middle section------- */
+/* ---------------Question Card ------- */
+.q-card {
+    border-radius: 10px;
+    background-color: var(--clr-bg-4-1);
+}
+
+.q-card>p:first-child {
+    color: var(--clr-text-3);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: .9rem;
+}
+
+.q-card>p:first-child>span:first-child {
+    font-size: 0.9rem;
+    color: var(--clr-text-2);
+    background-color: var(--clr-bg-11);
+    padding: 0.1rem .3rem;
+    border-radius: 5px;
+}
+
+.q-box {
+    padding: 1rem 0 0 1rem;
+    border-top: solid 1px var(--clr-bdr-4);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.q-box>p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--clr-text-2);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.q-box>p:nth-child(2) {
+    font-size: 0.8rem;
+    color: var(--clr-text-4);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.q-box>p:nth-child(2)>span:first-child {
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* q-box button box */
+.q-box>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.q-box>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.q-box>div>div>button {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-text-2);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--clr-bg-4);
+    }
+}
+
+.q-box>div>div:first-child>button:first-child {
+    border: solid 1px var(--clr-bdr-5);
+}
+
+.q-box>div>div:nth-child(2)>button {
+    border-radius: 50%;
+    padding: .5rem .7rem;
+    position: relative;
+}
+
+.q-box>div>div:nth-child(2)>button:nth-child(2)::after,
+.q-box>div>div:nth-child(2)>button:nth-child(1)::after {
+    content: 'Downvote';
+    position: absolute;
+    bottom: 2.7rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: solid 1px var(--clr-bdr-4);
+    background-color: var(--clr-bg-4);
+    visibility: hidden;
+    transition: all 0.3s step-end;
+
+
+}
+
+.q-box>div>div:nth-child(2)>button:nth-child(2)::after {
+    content: 'More';
+}
+
+.q-box>div>div:nth-child(2)>button:nth-child(2):hover::after,
+.q-box>div>div:nth-child(2)>button:nth-child(1):hover::after {
+    visibility: visible;
+}
+
+
+
+
+
+.q-box>div>div>button>span:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* --------------- more btn ------- */
+
+.q-card .more-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 1px var(--clr-bdr-4);
+    border-bottom: solid 1px var(--clr-bdr-4);
+    margin: .2rem 0 0 0;
+    padding: .2rem;
+}
+
+.q-card .more-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--clr-text-3);
+    cursor: pointer;
+    font-weight: 550;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--clr-bg-4);
+    }
+}
+
+/* ---------------- Add topics box ---------- */
+
+.q-card .topics-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+.topics-box>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.topics-box>div>h4 {
+    color: var(--clr-text-2);
+}
+
+.topics-box>div>p {
+    font-size: 0.9rem;
+    color: var(--clr-text-4);
+}
+
+.topics-box>div>button {
+    background-color: transparent;
+    border: solid 1px var(--clr-bdr-1);
+    color: var(--clr-text-11);
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 550;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--clr-text-14);
+    }
+}
+
+.topics-box>div:nth-child(2) {
+    width: 20%;
+    /* height: fit-content; */
+    border-radius: 10px;
+}
+
+.topics-box>div:nth-child(2)>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----------------- Right Section ------------------ */
+
+.right-sec>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--clr-bdr-5);
+    padding: 1rem 1rem;
+    color: var(--clr-text-2);
+    font-weight: 500;
+}
+
+.right-sec>div:first-child>button {
+    font-size: 1.0rem;
+    padding: 0.4rem .5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid 1px var(--clr-bdr-5);
+    color: var(--clr-text-2);
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background-color: var(--clr-bg-17);
+    }
+}
+
+.right-sec>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--clr-text-2);
+}
+
+.right-sec>div:nth-child(2)>p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.right-sec>div:nth-child(2)>button {
+    background-color: transparent;
+    border: solid 1px var(--clr-bdr-1);
+    color: var(--clr-text-9);
+    cursor: pointer;
+    font-weight: 550;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--clr-text-14);
+    }
+}
+
+.right-sec>div:nth-child(2)>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 3rem 0 1rem 0;
+    color: var(--clr-text-7);
+}

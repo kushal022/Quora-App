@@ -93,9 +93,9 @@ function NavBar() {
                 <img className='q-logo' src={QuoraLogo} alt="quora-logo" />
             </div>
             <ul className='nav-list-left'>
-                <li className='home'><NavLink to="home" className='nav-icon'><MdHome /></NavLink></li>
+                <li className='home'><NavLink to="/" className='nav-icon'><MdHome /></NavLink></li>
                 <li className='following'><NavLink to="following" className='nav-icon'><RiListView /></NavLink></li>
-                <li className='answer'><NavLink to="" className='nav-icon'><FaRegEdit /></NavLink></li>
+                <li className='answer'><NavLink to="answer" className='nav-icon'><FaRegEdit /></NavLink></li>
                 <li className='spaces'
                     onClick={handlerDropdownSpace}
                 ><span className='nav-icon'><FaPeopleGroup /></span>
