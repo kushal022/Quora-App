@@ -59,6 +59,7 @@
     border: solid thin var(--clr-bdr-4);
 }
 
+.btn-box .ans-btn,
 .btn-box>button {
     width: 30%;
     height: 2.5rem;
@@ -71,6 +72,12 @@
     cursor: pointer;
     text-align: center;
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
 
     &:hover {
         background-color: var(--clr-bg-5);
@@ -78,6 +85,7 @@
 }
 
 .btn-box .btn-box-icon {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 1000;
     margin-right: 5px;
 }

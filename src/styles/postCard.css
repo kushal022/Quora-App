@@ -96,6 +96,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     /* -webkit-box-orient: horizontal; */
+    transition: all .3s;
 }
 
 .extend-para {

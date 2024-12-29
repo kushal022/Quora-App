@@ -28,23 +28,23 @@ function AddQuestion(props) {
     }
 
     return (
-        <main
-            className='main-add-question-container'
-        >
+        <main className='main-add-question-container'>
             <div className='add-qus-close-btn-box'><button onClick={handlerCloseCard} >X</button></div>
             <div className="add-create-box">
                 <button
                     className='add-Qus-btn'
                     onClick={handlerAddQuestion}
                     style={props.initialCard === 'addQusCard' ? {
-                        borderBottomColor: 'var(--clr-bdr-1)', backgroundColor: 'transparent'
+                        borderBottomColor: 'var(--clr-bdr-1)',
+                        backgroundColor: 'transparent'
                     } : null}
                 >Add Question</button>
                 <button
                     className='create-btn'
                     onClick={handlerCreatePost}
                     style={props.initialCard === 'createPost' ? {
-                        borderBottomColor: 'var(--clr-bdr-1)', backgroundColor: 'transparent'
+                        borderBottomColor: 'var(--clr-bdr-1)',
+                        backgroundColor: 'transparent'
                     } : null}
                 >Create Post</button>
             </div>
@@ -78,7 +78,6 @@ function AddQuestion(props) {
                         </div>
                     </div>
                 </form>
-
                 :
                 //  ------------ Create Post--------------
                 <form className='add-qus-form'

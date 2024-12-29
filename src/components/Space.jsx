@@ -30,8 +30,8 @@ function Space() {
             <div className='query-container'>
                 {query.map((query, index) => {
                     return (
-                        <div className='query-link-box'>
-                            <Link className='query-link' key={index} >{query}</Link>
+                        <div className='query-link-box' key={index}>
+                            <Link className='query-link' >{query}</Link>
                             <span>&middot;</span>
                         </div>
                     )

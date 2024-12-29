@@ -4,6 +4,7 @@ import QuestionBox from '../components/QuestionBox'
 import Space from '../components/Space'
 import PostCard from '../components/PostCard'
 import Advertisement from '../components/Advertisement'
+import QusCompo from '../components/QusCompo'
 
 
 
@@ -16,6 +17,7 @@ function FollowingPage() {
             </div>
             <div className='middle-section'>
                 <QuestionBox />
+                <QusCompo />
                 <PostCard />
                 <PostCard />
                 <PostCard />

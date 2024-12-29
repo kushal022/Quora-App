@@ -43,6 +43,11 @@
     "name": "Space 9",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg9.jpg" 
+    },
+    { "id": 10, 
+    "name": "Space 10",
+    "description": "This is Space 1", 
+    "imgUrl": "../../public/spaces-img/spaceimg7.jpg" 
     }
   
 ]

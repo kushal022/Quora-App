@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/postCard.css'
 import { FcButtingIn } from "react-icons/fc";
 import { Link } from 'react-router-dom';
@@ -8,7 +8,21 @@ import { TiArrowSync } from "react-icons/ti";
 
 
 function PostCard() {
+    const [exp, setExp] = useState(false);
+    const [photo, setPhoto] = useState([]);
+
+    const handleExpClick = () => {
+        setExp(!exp);
+    }
+
+    useEffect(() => {
+        fetch('https://fakestoreapiserver.reactbd.com/photos')
+            .then(response => response.json())
+            .then(data => setPhoto(data))
+    }, [])
+
     return (
+
         <main className='postCardContainer'>
             <p className="promoted">Promoted by this company</p>
             <div className="profile-icon-post-card-box">
@@ -22,8 +36,11 @@ function PostCard() {
             </div>
             <div className="post-content-post-card">
                 <h2>Post Title</h2>
-                <p>This is the content of the post. content of the post.content of the post.content of the post. content of the post. content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussioncontent of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussion.</p>
-                <button className='extend-para'>(more)</button>
+                <p style={{ display: exp ? "block" : "-webkit-box" }}>
+                    This is the content of the post. content of the post.content of the post.content of the post. content of the post. content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussioncontent of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussion.</p>
+                <button className='extend-para'
+                    style={{ display: exp ? "none" : "block" }}
+                    onClick={handleExpClick}>(more)</button>
             </div>
             <div className="post-card-img-box">
                 <img src="../../public/spaces-img/spaceimg2.jpg" alt="Post Card Image" />

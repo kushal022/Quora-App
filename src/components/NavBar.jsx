@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import '../styles/navBar.css'
 import QuoraLogo from '../../public/quoraLogo2.png'
 import { NavLink, Link } from 'react-router-dom'
-import Space from './Space'
 import spaceData from '../api/spaceData.json'  // Space data import
 import Profile from './Profile'
 import AddQuestion from './AddQuestion';
@@ -22,11 +21,15 @@ import { FaAngleRight } from "react-icons/fa6";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 
-function NavBar() {
-    const [isOpenAddQusCard, setIsOpenAddQusCard] = useState(false);
-    const [isOpenPremiumCard, setIsOpenPremiumCard] = useState(false);
-    const [initialCard, setInitialCard] = useState('addQusCard');
-    const [disableChild, setDisableChild] = useState(false);
+function NavBar(props) {
+    const { isOpenAddQusCard,
+        setIsOpenAddQusCard,
+        initialCard,
+        setInitialCard,
+        isOpenPremiumCard,
+        setIsOpenPremiumCard
+    } = props;
+
     // Drop Down Toggles states:
     const [toggleDownarrow, setToggleDownarrow] = useState(false);
     const [toggleDropDownSpace, setToggleDropDownSpace] = useState(false);

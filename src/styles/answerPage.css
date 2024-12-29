@@ -70,7 +70,13 @@
     background-color: var(--clr-bg-4-1);
 }
 
-.q-card>p:first-child {
+.q-compo {
+    background-color: var(--clr-bg-4-1);
+    border-radius: 10px;
+    margin-top: .5rem;
+}
+
+.q-compo>p:first-child {
     color: var(--clr-text-3);
     display: flex;
     gap: 0.5rem;
@@ -79,7 +85,7 @@
     font-size: .9rem;
 }
 
-.q-card>p:first-child>span:first-child {
+.q-compo>p:first-child>span:first-child {
     font-size: 0.9rem;
     color: var(--clr-text-2);
     background-color: var(--clr-bg-11);
@@ -93,6 +99,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-bottom: 0.4rem;
 }
 
 .q-box>p:first-child {
@@ -151,7 +158,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: var(--clr-bg-4);
+        background-color: var(--clr-bg-5);
     }
 }
 
