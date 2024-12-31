@@ -6,6 +6,10 @@ import { TbArrowBigUp, TbArrowBigDown } from "react-icons/tb";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { TiArrowSync } from "react-icons/ti";
 
+import postData from '../api/postData.json'
+import QusCompo from '../components/QusCompo'
+
+
 
 function PostCard() {
     const [exp, setExp] = useState(false);
@@ -14,7 +18,6 @@ function PostCard() {
     const handleExpClick = () => {
         setExp(!exp);
     }
-
     useEffect(() => {
         fetch('https://fakestoreapiserver.reactbd.com/photos')
             .then(response => response.json())
@@ -22,43 +25,53 @@ function PostCard() {
     }, [])
 
     return (
-
-        <main className='postCardContainer'>
-            <p className="promoted">Promoted by this company</p>
-            <div className="profile-icon-post-card-box">
-                <FcButtingIn className='profile-icon-post-card' />
-            </div>
-            <div className="user-detail-post-card">
-                <h3>User name</h3>
-                <span>&middot;</span>
-                <Link className='follow-link'>Follow</Link>
-                <p>User Detail, Where does he/she belong?</p>
-            </div>
-            <div className="post-content-post-card">
-                <h2>Post Title</h2>
-                <p style={{ display: exp ? "block" : "-webkit-box" }}>
-                    This is the content of the post. content of the post.content of the post.content of the post. content of the post. content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussioncontent of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. e content of the post. It could be a question, answer, or discussion.</p>
-                <button className='extend-para'
-                    style={{ display: exp ? "none" : "block" }}
-                    onClick={handleExpClick}>(more)</button>
-            </div>
-            <div className="post-card-img-box">
-                <img src="../../public/spaces-img/spaceimg2.jpg" alt="Post Card Image" />
-            </div>
-            <div className="post-card-actions-box">
-                <div className="upDownVote-box">
-                    <button className='upVote-btn'>
-                        <TbArrowBigUp className='upArrow-icon' />
-                        <span>Upvote</span>
-                        <span>&middot;</span>
-                        <span>123K</span>
-                    </button>
-                    <button className='downVote-btn'><TbArrowBigDown /></button>
-                </div>
-                <button className='comment-btn'><IoChatbubbleOutline className='comment-icon' />140</button>
-                <button className='share-btn'><TiArrowSync className='share-icon' />56</button>
-            </div>
-        </main>
+        <>
+            {postData.map((post, index) => {
+                return (
+                    <>
+                        <main className='postCardContainer' key={index}>
+                            <p className="promoted">Promoted by this company</p>
+                            <div className="profile-icon-post-card-box">
+                                {/* <FcButtingIn className='profile-icon-post-card' /> */}
+                                <img src={post.postImage} alt='userImage' className='profile-icon-post-card' />
+                            </div>
+                            <div className="user-detail-post-card">
+                                <h3>{post.userName}</h3>
+                                <span>&middot;</span>
+                                <Link className='follow-link'>Follow</Link>
+                                {/* <p>User Detail, Where does he/she belong?</p> */}
+                                <p>{post.address}</p>
+                            </div>
+                            <div className="post-content-post-card">
+                                <h2>{post.postHeading}</h2>
+                                <p style={{ display: exp ? "block" : "-webkit-box" }}>{post.postBody}</p>
+                                <button className='extend-para'
+                                    style={{ display: exp ? "none" : "block" }}
+                                    onClick={handleExpClick}>(more)</button>
+                            </div>
+                            <div className="post-card-img-box">
+                                {/* <img src="../../public/spaces-img/spaceimg2.jpg" alt="Post Card Image" /> */}
+                                <img src={post.postImage} alt="Post Card Image" />
+                            </div>
+                            <div className="post-card-actions-box">
+                                <div className="upDownVote-box">
+                                    <button className='upVote-btn'>
+                                        <TbArrowBigUp className='upArrow-icon' />
+                                        <span>Upvote</span>
+                                        <span>&middot;</span>
+                                        <span>{post.upvotes}</span>
+                                    </button>
+                                    <button className='downVote-btn'><TbArrowBigDown /></button>
+                                </div>
+                                <button className='comment-btn'><IoChatbubbleOutline className='comment-icon' />{post.comments}</button>
+                                <button className='share-btn'><TiArrowSync className='share-icon' />{post.shares}</button>
+                            </div>
+                        </main>
+                        <QusCompo />
+                    </>
+                )
+            })}
+        </>
     )
 }
 

@@ -1,51 +1,51 @@
 [
     { "id": 1, 
-    "name": "Space 1",
+    "name": "Mathematics Skills",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg1.jpg" 
     },
     { "id": 2, 
-    "name": "Space 2",
+    "name": "World History",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg2.jpg" 
     },
     { "id": 3, 
-    "name": "Space 3",
+    "name": "Get Insta Followers",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg3.jpg" 
     },
     { "id": 4, 
-    "name": "Space 4",
+    "name": "Writing",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg4.jpg" 
     },
     { "id": 5, 
-    "name": "Space 5",
+    "name": "Economics",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg5.jpg" 
     },
     { "id": 6, 
-    "name": "Space 6",
+    "name": "Music",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg6.jpg" 
     },
     { "id": 7, 
-    "name": "Space 7",
+    "name": "Science",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg7.jpg" 
     },
     { "id": 8, 
-    "name": "Space 8",
+    "name": "Space X",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg8.jpg" 
     },
     { "id": 9, 
-    "name": "Space 9",
+    "name": "Health",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg9.jpg" 
     },
     { "id": 10, 
-    "name": "Space 10",
+    "name": "AI Tech",
     "description": "This is Space 1", 
     "imgUrl": "../../public/spaces-img/spaceimg7.jpg" 
     }

@@ -165,6 +165,32 @@
     content: 'Spaces';
 }
 
+/* --- Notification Indicator ---- */
+.following::before,
+.notifications::before {
+    content: '8';
+    position: absolute;
+    bottom: 1.6rem;
+    left: 1.6rem;
+    background-color: red;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    font-size: .7rem;
+    font-weight: 600;
+
+}
+
+.following::before {
+    content: '5';
+}
+
+
+
 /* ----------------- Space Dropdown Menu ----------------------- */
 
 .space-dropdown-box {

@@ -7,7 +7,7 @@ import PostCard from '../components/PostCard'
 import QusCompo from '../components/QusCompo'
 
 function HomePage(props) {
-    const { isOpenAddQusCard, setIsOpenAddQusCard, initialCard, setInitialCard } = props
+    const { isOpenAddQusCard, setIsOpenAddQusCard, initialCard, setInitialCard } = props.dataVar;
 
     return (
         <main className='main-homePage'>
@@ -22,12 +22,7 @@ function HomePage(props) {
                     setInitialCard={setInitialCard}
                 />
                 <PostCard />
-                <QusCompo />
-                <QusCompo />
-                <PostCard />
-                <QusCompo />
-                <PostCard />
-                <PostCard />
+                {/* <QusCompo /> */}
             </div>
             <div className='right-section'>
                 <Advertisement />

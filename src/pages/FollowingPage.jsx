@@ -9,14 +9,21 @@ import QusCompo from '../components/QusCompo'
 
 
 
-function FollowingPage() {
+function FollowingPage(props) {
+    const { isOpenAddQusCard, setIsOpenAddQusCard, initialCard, setInitialCard } = props.dataVar;
+
     return (
         <main className='main-following-page'>
             <div className="left-section">
                 <Space />
             </div>
             <div className='middle-section'>
-                <QuestionBox />
+                <QuestionBox
+                    isOpenAddQusCard={isOpenAddQusCard}
+                    setIsOpenAddQusCard={setIsOpenAddQusCard}
+                    initialCard={initialCard}
+                    setInitialCard={setInitialCard}
+                />
                 <QusCompo />
                 <PostCard />
                 <PostCard />

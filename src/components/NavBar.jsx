@@ -28,7 +28,7 @@ function NavBar(props) {
         setInitialCard,
         isOpenPremiumCard,
         setIsOpenPremiumCard
-    } = props;
+    } = props.dataVar;
 
     // Drop Down Toggles states:
     const [toggleDownarrow, setToggleDownarrow] = useState(false);
@@ -170,18 +170,8 @@ function NavBar(props) {
             </ul>
             {/* ----------- Add Question Card for add question button ---------------- */}
             <div className="add-qus-card"
-                // onClick={(e) => {
-                //     !disableChild ? setIsOpenAddQusCard(!isOpenAddQusCard) : null;
-                //     // setDisableChild(false);
-                // }}
                 style={{ display: isOpenAddQusCard ? "flex" : "none" }}>
                 <AddQuestion
-                    // closePage={(e) => {
-                    //     // e.stopPropagation(); 
-                    //     // setDisableChild(!disableChild);
-                    //     console.log("helo");
-                    //     setIsOpenAddQusCard(!isOpenAddQusCard);
-                    // }}
                     isOpenAddQusCard={isOpenAddQusCard}
                     setIsOpenAddQusCard={setIsOpenAddQusCard}
                     initialCard={initialCard}

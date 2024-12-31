@@ -12,27 +12,25 @@ function App() {
   const [isOpenPremiumCard, setIsOpenPremiumCard] = useState(false);
   const [initialCard, setInitialCard] = useState('addQusCard');
 
+  const dataVar = {
+    isOpenAddQusCard: isOpenAddQusCard,
+    setIsOpenAddQusCard: setIsOpenAddQusCard,
+    isOpenPremiumCard: isOpenPremiumCard,
+    setIsOpenPremiumCard: setIsOpenPremiumCard,
+    initialCard: initialCard,
+    setInitialCard: setInitialCard,
+  }
 
   return (
     <>
-      <NavBar
-        isOpenAddQusCard={isOpenAddQusCard}
-        setIsOpenAddQusCard={setIsOpenAddQusCard}
-        isOpenPremiumCard={isOpenPremiumCard}
-        setIsOpenPremiumCard={setIsOpenPremiumCard}
-        initialCard={initialCard}
-        setInitialCard={setInitialCard}
-      />
+      <NavBar dataVar={dataVar} />
       <Routes>
-        <Route path="/" element={<HomePage
-          isOpenAddQusCard={isOpenAddQusCard}
-          setIsOpenAddQusCard={setIsOpenAddQusCard}
-          initialCard={initialCard}
-          setInitialCard={setInitialCard}
-        />} />
-        <Route path="/following" element={<FollowingPage />} />
+        <Route path="/" element={<HomePage dataVar={dataVar} />} />
+        <Route path="/following" element={<FollowingPage dataVar={dataVar} />} >
+          <Route path=":answer" element={<AnswerPage />} />
+        </Route>
         <Route path="/notification" element={<NotificationPage />} />
-        <Route path="/answer" element={<AnswerPage />} />
+        <Route path="answer" element={<AnswerPage />} />
       </Routes>
     </>
   )
